@@ -1,0 +1,12 @@
+{
+  "notypeof": true,
+  "debug": true,
+  "eqnull": true,
+  "globals": {
+    "angular": false,
+    "jQuery": true,
+    "console": true,
+    "module": true,
+    "document": true
+  }
+}
