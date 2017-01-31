@@ -278,7 +278,7 @@ module.exports = function (grunt) {
           '<%= app.dist %>/scripts/{,*/}*.js',
           '<%= app.dist %>/styles/{,*/}*.css',
           '<%= app.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= app.dist %>/styles/fonts/*'
+          '<%= app.dist %>/fonts/*'
         ]
       }
     },
@@ -420,7 +420,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'fonts/{,*/}*.*',
+            'scripts/index.js'
           ]
         }, {
           expand: true,
