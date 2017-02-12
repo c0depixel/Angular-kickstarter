@@ -1,10 +1,12 @@
 # Project
 
-Grunt/Angular Kickstarter. Ready for Cordova development.
+Grunt/Angular Kickstarter.
 
 ## Build & development
 
-Run `grunt` for building, `grunt serve` for development preview with livereload and `grunt serve:www` for production preview
+Initial run: `npm install` and `bower install`
+
+Development run: `grunt` for building, `grunt serve` for development preview with livereload and `grunt serve:www` for production preview
 
 
 
