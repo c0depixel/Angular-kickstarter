@@ -489,6 +489,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
+      'ngtemplates:server',
       'connect:livereload',
       'watch'
     ]);
@@ -499,7 +500,6 @@ module.exports = function (grunt) {
     'wiredep',
     'concurrent:test',
     'postcss',
-    'ngtemplates:server',
     'connect:test',
     'karma'
   ]);
