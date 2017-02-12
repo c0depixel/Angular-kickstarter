@@ -50,6 +50,10 @@ module.exports = function (grunt) {
         files: ['<%= app.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['sass:server', 'postcss']
       },
+      ngtemplates: {
+        files: ['<%= app.app %>/views/**/*.html'],
+        tasks: ["ngtemplates:server"]
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -385,6 +389,15 @@ module.exports = function (grunt) {
         cwd: '<%= app.app %>',
         src: 'views/**/*.html',
         dest: '.tmp/templateCache.js'
+      },
+      server: {
+        options: {
+          module: '<%= app.ngApp %>',
+          htmlmin: '<%= htmlmin.dist.options %>'
+        },
+        cwd: '<%= app.app %>',
+        src: 'views/**/*.html',
+        dest: '.tmp/templateCache.js'
       }
     },
 
@@ -486,6 +499,7 @@ module.exports = function (grunt) {
     'wiredep',
     'concurrent:test',
     'postcss',
+    'ngtemplates:server',
     'connect:test',
     'karma'
   ]);
@@ -497,7 +511,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'postcss',
-    'ngtemplates',
+    'ngtemplates:dist',
     'concat',
     'ngAnnotate',
     'copy:dist',
