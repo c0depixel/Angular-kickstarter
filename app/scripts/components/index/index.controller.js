@@ -1,11 +1,15 @@
-(function() {
+(function () {
   'use strict';
 
-  angular.module('indexModule').controller('IndexCtrl', IndexCtrl);
+  angular
+    .module('indexModule')
+    .controller('IndexCtrl', IndexCtrl);
 
-  /* @ngInject */
+  /** @ngInject */
   function IndexCtrl() {
+    var vm = this;
     console.log("IndexCtrl ready");
   }
 
 })();
+

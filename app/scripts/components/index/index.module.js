@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  angular.module('indexModule', []).config(config);
+  angular
+    .module('indexModule', [])
+    .config(config);
 
   /** @ngInject */
   function config($stateProvider) {
@@ -17,6 +19,7 @@
           }
         }
       });
+
   }
 
 })();

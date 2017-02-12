@@ -1,21 +1,24 @@
-(function() {
+(function () {
   'use strict';
 
-angular
-  .module('angular', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ui.router',
-    'ngSanitize',
-    'ngTouch',
-    'common',
-    'indexModule'
-  ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  angular
+    .module('angular', [
+      'ngAnimate',
+      'ngCookies',
+      'ngResource',
+      'ui.router',
+      'ngSanitize',
+      'ngTouch',
+      'common',
+      'indexModule'
+    ])
+    .config(config);
+
+  /** @ngInject */
+  function config($stateProvider, $urlRouterProvider) {
 
     // Convert upper-case urls to lower-case
-    $urlRouterProvider.rule(function($injector, $location) {
+    $urlRouterProvider.rule(function ($injector, $location) {
       var path = $location.path(),
         lowerCasePath = path.toLowerCase();
       if (path !== lowerCasePath) {
@@ -29,7 +32,6 @@ angular
     // Default location
     $urlRouterProvider.otherwise("/");
 
-  });
+  }
 
 })();
-

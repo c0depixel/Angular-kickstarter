@@ -1,6 +1,6 @@
 {
   "name": "angular-kickstarter",
-  "description": "Grunt/Angular Kickstarter. Ready for Cordova development.",
+  "description": "Grunt/Angular Kickstarter",
   "private": true,
   "version": "1.0.0",
   "author": "Nenad Pejovic",

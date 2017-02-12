@@ -1,11 +1,14 @@
-(function() {
+(function () {
   'use strict';
 
-  angular.module('common').controller('CommonCtrl', CommonCtrl);
+  angular
+    .module('common')
+    .controller('CommonCtrl', CommonCtrl);
 
-  /* @ngInject */
+  /** @ngInject */
   function CommonCtrl() {
+    var vm = this;
     console.log("CommonCtrl ready");
   }
- 
+
 })();
